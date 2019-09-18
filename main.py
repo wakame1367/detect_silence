@@ -14,6 +14,13 @@ if not root_path.exists():
 # https://github.com/jiaaro/pydub/blob/master/pydub/silence.py
 def detect_silence(audio_segment, min_silence_len=1000, silence_thresh=-16,
                    seek_step=1):
+    """
+    :param audio_segment: pydub.AudioSegment
+    :param min_silence_len: int
+    :param silence_thresh: int
+    :param seek_step: int
+    :return:
+    """
     seg_len = len(audio_segment)
 
     # you can't have a silent portion of a sound that is longer than the sound
